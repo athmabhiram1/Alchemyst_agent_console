@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+
+# Logs & temp files
+*.log
+*.err.log
+*.tsbuildinfo
+test-out.txt
+
+# Local environment
+.env*.local
+
+# Playwright MCP capture artifacts
+.playwright-mcp/
+
+# OS
+.DS_Store
+Thumbs.db
