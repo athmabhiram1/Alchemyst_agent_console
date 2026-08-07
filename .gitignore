@@ -18,6 +18,9 @@ test-out.txt
 # Playwright MCP capture artifacts
 .playwright-mcp/
 
+# Submission packaging artifact
+agent-console-alchemyst-submission.zip
+
 # OS
 .DS_Store
 Thumbs.db
