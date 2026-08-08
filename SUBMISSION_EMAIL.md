@@ -1,26 +1,49 @@
-# Submission Email — Alchemyst Agent Console
+# Submission Email — Alchemyst AI (Agent Console Task)
 
-**Subject:** Agent Console Selection Task — Submission (Athmabhiram)
+> **Send from:** athmabhiram@gmail.com
+> **To:** anuran@getalchemystai.com
+> **Cc:** vedanta@getalchemystai.com, khushi@getalchemystai.com
+> **Subject:** Alchemyst Full-Stack AI Intern — Agent Console Submission — Athmabhiram
 
 ---
 
 Hi Alchemyst team,
 
-Please find my submission for the **Agent Console** selection task.
+I've completed the **Agent Console** selection task and would like to submit my work for the Full-Stack AI Intern role.
 
-**GitHub repository:** `<paste your repo URL here>`
+**GitHub repository:** https://github.com/athmabhiram1/Alchemyst_agent_console.git
 
-## Project summary
+## What I built
 
-I built a hardened, real-time WebSocket console for observing and interacting with an AI agent. It streams tokens progressively, freezes tool calls into immutable expandable cards, shows a live trace timeline, and inspects the agent's context window with a client-side JSON diff.
+A hardened, real-time WebSocket console for observing and interacting with an AI agent, built with **Next.js 15 + React 19 + TypeScript (strict)**:
 
-The protocol engine (pure TypeScript, 22 passing unit tests) handles **strict sequence ordering, deduplication, and gap recovery**. On connection loss it reconnects automatically with exponential backoff and sends `RESUME last_seq` so the server replays the tail of the stream — **streaming continues seamlessly with no duplicated tokens**.
+- **Streaming chat** — tokens render progressively with a cursor, plus a composer to talk to the agent.
+- **Frozen tool-call cards** — a tool call freezes mid-stream into an expandable, immutable card showing `args` + `result`.
+- **Live trace timeline** — virtualized, filterable event log of every `TOKEN`, `TOOL_CALL`, `CONTEXT_SNAPSHOT`, `PING`/`PONG`, etc.
+- **Context inspector** — snapshot scrubber with a JSON tree and a client-side diff-vs-previous view.
 
-To prove it, I included a **chaos-testing mock server** that force-drops connections every third message, reorders and duplicates events, and injects malformed payloads. Screenshots and a 2-minute demo guide are in **README.md**, **DEMO.md**, and `docs/screenshots/`.
+The protocol layer is a pure-TypeScript `AgentEngine` (22 passing unit tests) that handles **strict sequence ordering, deduplication, and gap recovery**. When the connection drops, it reconnects with exponential backoff and sends `RESUME last_seq` so the server replays the tail — streaming continues with **zero lost and zero duplicated tokens**.
 
-`npm run build` and `npm run test` both pass.
+To prove it survives real-world flakiness, I shipped a **chaos-testing mock server** that force-drops connections, reorders and duplicates events, and injects malformed payloads. Screenshots and a 2-minute reproduction guide are in the repo (`README.md`, `DEMO.md`, `docs/screenshots/`).
 
-Thank you for your time — I'm happy to walk through it live.
+`npm run build` and `npm run test` both pass cleanly.
+
+## About me
+
+I'm a 3rd-year B.Tech (AI & ML) student at BMS Institute of Technology, Bengaluru. I'm available full-time and can start immediately. Happy to walk you through the code and the chaos-recovery flow live.
+
+Thank you for your time — I look forward to your feedback.
 
 Best regards,
-Athmabhiram
+**Athmabhiram S J**
+athmabhiram@gmail.com | +91 8618166656
+Bengaluru, India
+
+---
+## Checklist before sending
+
+1. Push the latest code to the GitHub repo (done).
+2. Verify the repo link opens publicly.
+3. Attach `agent-console-alchemyst-submission.zip` (optional, but recommended as a backup).
+4. Send from **athmabhiram@gmail.com**.
+5. Optional: record the video from `VIDEO_SCRIPT.md` and add it as a second email or a YouTube/Drive link.
